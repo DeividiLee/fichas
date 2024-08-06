@@ -1,0 +1,98 @@
+html{
+    font-family: Inter, sans-serif;
+    font-size:62,5%;
+}
+button{
+    border-style: none;
+}
+.navegacao{
+    background: linear-gradient(180deg, rgba(1,33,113,1) 0%, rgba(2,63,215,1) 100%);
+    height:287px;
+    padding-top:10%;
+    color:white;
+}
+.group{
+    display:flex;
+    justify-content: center;
+    
+}
+nav h4{
+    margin:0 45px;
+    font-weight:regular;
+}
+.pontinhos{
+    width:48px;
+    height:12px;
+    display:flex;
+    margin-left:45%;
+    margin-top:5%
+}
+nav h6{
+    height: 71px;
+    width:336px;
+    font-size:16px;
+    font-weight:lighter;
+    margin-left: 5%;
+    text-align: center;
+    margin-top:5%;
+    letter-spacing: 0.3px;
+    line-height:30px;
+}
+nav b{
+    font-weight:bold
+}
+
+.input-grupo{
+    margin-left: 26px;
+    width:338px;
+    height:42px;
+    background-color:white;
+    border-radius: 5px;
+    margin-bottom:30px;
+    margin-top:23px;
+    
+}
+.input-grupo input{
+    width:260px;
+    height:40px;
+    border-style: none;
+    text-size-adjust: 16px;
+}
+.input-grupo button{
+    background: white;
+}
+main{
+    display:flex;
+    justify-content: center;
+    background-color:#EEEEEE;
+    height:384px;
+}
+
+ul{
+    list-style:none;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top:43px;
+    padding:30px;
+}
+li{
+    display:flex;
+    background:white;
+    width:338px;
+    border-radius: 10px;
+    height:63px;
+    padding: 20px;
+    font-size:18px;
+    font-weight:normal;
+    border-left: 30px solid #012171;
+}
+
+
+
+
+
+
+
+
+
