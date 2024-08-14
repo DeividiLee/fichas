@@ -2,5 +2,52 @@ html{
     font-family: Inter, sans-serif;
 }
 body{
-    background: linear-gradient(180deg, rgba(1,33,113,1) 0%, rgba(2,63,215,1) 100%);
+  background-color:blue;  
+}
+h4{
+    font-size:1.5rem;
+    color:white
+}
+h5{
+    font-size: 1.2rem;
+    color:white
+}
+h6{
+    font-size:1rem;
+    color:white
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+}
+.group{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    margin:0 1rem 0 1rem
+}
+
+.group a{
+    height:2rem;
+    margin-top:2.01rem;
+}
+.pontinhos2{
+    width:2.75rem;
+    height:0.8rem
+}
+.divpontinhos{
+    display:flex;
+    justify-content: center;
+}
+main{
+    background-color: white;
+    border-radius: 10px;
+    width:21.0625rem;
+    height:37.75rem
+}
+
+main section{
+    overflow-y: scroll;
 }

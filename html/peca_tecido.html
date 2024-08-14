@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/peca_tecido.css">
+    <link rel="stylesheet" href="../css/peca_tecido.css">
 </head>
 <body>
     <nav>
         <div class="group">
-            <a href=""><img src="/imgs/botao-voltar (1) 4.png" alt=""></a>
+            <a href=""><img src="../imgs/botao-voltar (1) 4.png" alt=""></a>
             <h4>Ficha de <b>Medidas</b></h4>
-            <a href=""><img src="/imgs/icon_close.png" alt=""></a>
+            <a href=""><img src="../imgs/icon_close.png" alt=""></a>
         </div>
     </nav>
-    <main></main>
+    <div class="divpontinhos"><img src="../imgs/pontinhos2.png" class="pontinhos2"></div>
+    <main>
+        <section><button onclick="botao()" id="botao">peça</button></section>
+        <button>Salvar</button>
+    </main>
+    
     
     
 </body>
 </html>
+<script>
+
+    function botao(){
+        if (document.getElementbyId('botao').style.display == 'none') {
+            document.getElementbyId('div').style.display = 'block'
+        } else 
+    }
+</script>
