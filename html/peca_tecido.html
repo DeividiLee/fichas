@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/peca_tecido.css">
 </head>
-<body>
+<body onload="listar()">
     <nav>
         <div class="group">
             <a href=""><img src="../imgs/botao-voltar (1) 4.png" alt=""></a>
@@ -16,7 +16,13 @@
     </nav>
     <div class="divpontinhos"><img src="../imgs/pontinhos2.png" class="pontinhos2"></div>
     <main>
-        <section><button onclick="botao()" id="botao">peça</button></section>
+        <section>
+            <button onclick="botao()" id="botao">peça</button>
+            <div id="lista" style="display:none">
+                <ul id="teste"></ul>
+                
+            </div>
+        </section>
         <button>Salvar</button>
     </main>
     
@@ -27,8 +33,25 @@
 <script>
 
     function botao(){
-        if (document.getElementbyId('botao').style.display == 'none') {
-            document.getElementbyId('div').style.display = 'block'
-        } else 
+        if (document.getElementById('lista').style.display == 'none') {
+            document.getElementById('lista').style.display = 'block'  
+        } else if(document.getElementById('lista').style.display == 'block') {
+            document.getElementById('lista').style.display = 'none'
+        }
+    }
+
+    function listar() {
+        const pecas = document.getElementById('teste')
+        pecas.innerHTML = `
+                <li><input type="checkbox">calça</li>
+                <li><input type="checkbox">terno</li>
+                <li><input type="checkbox">regata</li>
+                ` 
     }
 </script>
+<!-- clicar no botão
+ aparecer uma lista de peças
+ selecionar as peças
+ peças incluir no botão
+ clicar fora 
+ fechar a lista de checkbox -->
