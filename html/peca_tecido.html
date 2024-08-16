@@ -19,11 +19,11 @@
         <section>
             <button onclick="botao()" id="botao">peça</button>
             <div id="lista" style="display:none">
-                <ul id="teste"></ul>
-                
+                <ul id="itens"></ul>
             </div>
+            
         </section>
-        <button>Salvar</button>
+        <button onclick="salvar()">Salvar</button>
     </main>
     
     
@@ -35,19 +35,38 @@
     function botao(){
         if (document.getElementById('lista').style.display == 'none') {
             document.getElementById('lista').style.display = 'block'  
-        } else if(document.getElementById('lista').style.display == 'block') {
+        } else {
             document.getElementById('lista').style.display = 'none'
         }
     }
 
     function listar() {
-        const pecas = document.getElementById('teste')
-        pecas.innerHTML = `
-                <li><input type="checkbox">calça</li>
-                <li><input type="checkbox">terno</li>
-                <li><input type="checkbox">regata</li>
-                ` 
+        const pecas = document.getElementById('itens')
+        pecas.innerHTML += `
+                <li><button onclick="mudar('blusa')">Blusa</button></li>
+                <li><button onclick="mudar('roupa')">Roupa</button></li>
+                <li><button onclick="mudar('pelado')">Pelado</button></li>
+                `
     }
+
+
+    function mudar(texto){
+        document.getElementById('botao').innerHTML = texto
+        if (document.getElementById('lista').style.display == 'block') {
+            document.getElementById('lista').style.display = 'none'  
+        } else {
+            document.getElementById('lista').style.display = 'block'
+        }
+    }
+
+    function salvar(){
+        sessionStorage.setItem('item', document.getElementById('botao').innerHTML)
+        //tem que redirecionar para outra página 
+    }
+
+    
+        
+    
 </script>
 <!-- clicar no botão
  aparecer uma lista de peças
