@@ -5,39 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="minhas_fichas.css">
+    <link rel="stylesheet" href="/css/minhas_fichas.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
-</head>
-<body style="background-color:#EEEEEE;">
+</head >
+<body style="background-color:#EEEEEE;" onload="listar()">
     <nav>
         <ul class="">
-            <li class="lupa"><a href=""><img src="imgs/button_left_back.png" alt="voltar"></a></li>
-            <li class="hamburguer"><a href=""><img src="imgs/button_hamburguer_menu.png" alt="menu"></a></li>
+            <li class="lupa"><a href=""><img src="/imgs/button_left_back.png" alt="voltar"></a></li>
+            <li class="hamburguer"><a href=""><img src="/imgs/button_hamburguer_menu.png" alt="menu"></a></li>
 
         </ul>
     </nav>
     <h4 class='h4'>Minhas <b>Fichas</b></h4>
     <div class="input-grupo">
-        <button><img src="imgs/button_lupa_pesquisar.png" alt=""></button>
+        <button><img src="/imgs/button_lupa_pesquisar.png" alt=""></button>
         <input type="text" placeholder="Pesquise Pedidos">
-        <button><img src="imgs/filtro.png" alt=""></button>
+        <button><img src="/imgs/filtro.png" alt=""></button>
     </div>
 
     <div class="adicionar">
         <h6>Adicionar <b>nova ficha</b></h6>
-        <button><img src="imgs/button_plus_adicionar.png" alt="adicionar"></button>
+        <button><img src="/imgs/button_plus_adicionar.png" alt="adicionar"></button>
     </div>
-    <main>
-        <a href="">Calça <> John Doe <img src="imgs/button_trash_apagar.png" alt=""></a>
-        <a href="">Calça <> John Doe <img src="imgs/button_trash_apagar.png" alt=""></a>
-        <a href="">Calça <> John Doe <img src="imgs/button_trash_apagar.png" alt=""></a>
-        <a href="">Calça <> John Doe <img src="imgs/button_trash_apagar.png" alt=""></a>
+    <main id="main">
+        
+
     </main>
 
 
 </body>
-
 </html>
+<script>
+    function listar(){
+        console.log('listar')
+        document.getElementById('main')
+        main.innerHTML += `
+            <a href="" id="1">Calça <> John Doe <button onclick="deletar()" style="background-color: #012171;"><img src="/imgs/button_trash_apagar.png" ></button></a>
+        `
+    }
+
+    function deletar(){
+        console.log('deletar')
+        const botao = document.getElementById('1')
+        botao.remove()
+        event.preventDefault();
+        console.log('prevenido')
+    }
+</script>
