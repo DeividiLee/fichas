@@ -2,6 +2,7 @@ html{
     font-family: Inter, sans-serif;
 }
 body{
+    padding:20px;
     background: linear-gradient(180deg, rgba(1,33,113,1) 0%, rgba(2,63,215,1) 100%);
 }
 h4{
@@ -16,7 +17,6 @@ h6{
     font-size:1rem;
     color:white
 }
-
 nav{
     display:flex;
     justify-content:center;
@@ -25,13 +25,13 @@ nav{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    width:100%;
-    margin:0 1rem 0 1rem
+    /* margin:1.6rem 2rem; */
+
+    /* margin:0 1rem 0 1rem */
 }
 
 .group a{
     height:2rem;
-    margin-top:2.01rem;
 }
 
 .dependente{
@@ -50,17 +50,35 @@ nav{
 main{
     background-color: white;
     border-radius: 10px;
-    width:21.0625rem;
+    padding:20px;
     height:37.75rem;
-    display:flex;
-    margin-left:1rem
 }
-
-main section{
-    overflow-y: scroll;
-}
-
-
 .mb-3{
     margin:1.5rem 1rem;
 }
+ul{
+    width:100%;
+    border-radius: 10px;
+}
+
+
+.item{
+    position:relative;
+    width:78.5vw;
+    right:15.5%;
+    font-size:1rem;
+    padding:1rem;    
+}
+
+.salvar{
+    box-shadow:4px #000000;
+    border-radius:20px;
+    width:100%;
+    color:white;
+    font-size:1rem;
+    font-weight: bolder;
+    background: linear-gradient(180deg, rgba(1,33,113,1) 0%, rgba(2,63,215,1) 100%);
+    
+}
+
+

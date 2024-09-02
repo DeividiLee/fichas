@@ -28,7 +28,7 @@
             </div>
             <div id="lista" style="display:none; list-style: none;">
                 <ul id="itens" style="list-style: none;">
-                    <li><input id="item" type="checkbox" onclick="itemSelecionado('blusa')">blusa</li>
+                    
                 </ul>
             </div>
             
@@ -51,29 +51,18 @@
         const pecas = document.getElementById('itens')
         pecas.innerHTML += `
             
-            <li><button onclick="mudar('blusa')">Blusa</button></li>
-            <li><button onclick="mudar('roupa')">Roupa</button></li>
-            <li><button onclick="mudar('pelado')">Pelado</button></li>
-            <li><input type="checkbox">blusa</li>
+            <li><input id="item" type="checkbox" onclick="mudar('blusa')">blusa</li>
                 `
-    }
-
-    function itemSelecionado(item){
-        console.log('aqui')
-        const checkbox = document.getElementById('item')
-        if(checkbox.checked){
-            console.log('mais um')
-            const pegarItem = document.getElementById('item')
-            document.getElementById('formGroupExampleInput').value = checkbox.value
-        }
-        
     }
 
 
     function mudar(texto){
-        document.getElementById('botao').innerHTML = texto
+        
+        if(checkbox.checked){
+            document.getElementById('botao').innerHTML = `$texto`
+        }
         if (document.getElementById('lista').style.display == 'block') {
-            document.getElementById('lista').style.display = 'none'  
+            document.getElementById('lista').style.display = 'none' 
         } else {
             document.getElementById('lista').style.display = 'block'
         }
